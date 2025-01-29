@@ -324,3 +324,9 @@
 	url = https://github.com/qt/qtquick3d.git
 	branch = 5.15
 	status = addon
+[submodule "qtmqtt"]
+	depends = qtbase qtdeclarative
+	path = qtmqtt
+	url = https://github.com/qt/qtmqtt.git
+	branch = 5.15
+	status = addon
