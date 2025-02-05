@@ -1,4 +1,12 @@
 Makefile
 .qmake.cache
 .qmake.super
+.qmake.stash
 *.pro.user*
+build
+config.log
+config.tests
+config.cache
+config.opt
+config.status.bat
+config.summary
