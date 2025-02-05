@@ -431,7 +431,7 @@ foreach ($MyQtPlatform in $MyQtPlatformList) {
         $MyTempOpenSslLibFolderAbs = Join-Path -Path $MyTempOpenSslFolderAbs -ChildPath lib
 
         $MyTempQtFolderAbs = Resolve-Path $TempBuildFolder
-        $MyTempQtFolderAbs = Join-Path -Path $MyTempQtFolderAbs -ChildPath qt
+        $MyTempQtFolderAbs = Join-Path -Path $MyTempQtFolderAbs -ChildPath Qt
         $MyTempQtFolderAbs = Join-Path -Path $MyTempQtFolderAbs -ChildPath $MyProjectVersion
         $MyTempQtFolderAbs = Join-Path -Path $MyTempQtFolderAbs -ChildPath $MyQtPlatform
 
@@ -680,8 +680,7 @@ foreach ($MyQtPlatform in $MyQtPlatformList) {
         $MyNmakeProcess = $null
         $MyNmakeProcessHandle = $null
         try {
-            $MyNmakeProcess = Start-Process -FilePath "$NmakeCli" -NoNewWindow -PassThru `
-                    -ArgumentList "all"
+            $MyNmakeProcess = Start-Process -FilePath "$NmakeCli" -NoNewWindow -PassThru
             $MyNmakeProcessHandle = $MyNmakeProcess.Handle
             $MyNmakeProcess.WaitForExit()
             $MyNmakeProcessExitCode = $MyNmakeProcess.ExitCode
